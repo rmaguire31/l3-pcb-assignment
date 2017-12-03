@@ -14,8 +14,8 @@ LINE Normal -16 40 0 32
 LINE Normal -32 32 0 32
 WINDOW 0 48 0 Left 2
 WINDOW 39 48 32 Left 2
+SYMATTR SpiceLine R=10k X=1
 SYMATTR Description A potentiometer
-SYMATTR SpiceLine R=10k x=1
 PIN 16 -16 NONE 8
 PINATTR PinName 1
 PINATTR SpiceOrder 1
