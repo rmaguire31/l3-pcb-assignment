@@ -2,7 +2,7 @@ CAP_BASS||#0805=2||@RS Part Number=||@Allied_Number=||@Manufacturer_Name=KEMET||
 CAP_BYPASS||#0603=2||@RS Part Number=801-5237||@Allied_Number=||@Manufacturer_Name=KEMET||@Manufacturer_Part_Number=C0805C104J3RACTU||@Other Part Number=||@3D Package=||@Height=0.5 mm
 CAP_BYPASSL||#1206=2||@RS Part Number=802-9977||@Allied_Number=||@Manufacturer_Name=KEMET||@Manufacturer_Part_Number=C1206C106K3RACTU||@Other Part Number=||@3D Package=||@Height=1.6 mm
 CAP_DCIN||#1210=2||@RS Part Number=691-1256||@Allied_Number=||@Manufacturer_Name=KEMET||@Manufacturer_Part_Number=C1210C475K3RACTU||@Other Part Number=||@3D Package=||@Height=1.7 mm
-CAP_DCOUT||#PANASONIC_RADIALH=2||@RS Part Number=708-3437||@Allied_Number=||@Manufacturer_Name=Panasonic||@Manufacturer_Part_Number=EEVF1E222M||@Other Part Number=||@3D Package=||@Height=16.5mm
+CAP_DCOUT||#PANASONIC_RADIALH=2||@RS Part Number=708-3434||@Allied_Number=||@Manufacturer_Name=Panasonic||@Manufacturer_Part_Number=EEVF1E102M||@Other Part Number=||@3D Package=||@Height=16.5mm
 CAP_GAIN||#0805=2||@RS Part Number=451-6290||@Allied_Number=||@Manufacturer_Name=KEMET||@Manufacturer_Part_Number=C0805C106K8RACTU||@Other Part Number=||@3D Package=||@Height=0.78 mm
 JACK||#THRU=3||@RS Part Number=||@Allied_Number=||@Manufacturer_Name=Switchcraft||@Manufacturer_Part_Number=35RAPC2BV4||@Other Part Number=||@3D Package=||@Height=
 LM386||#LM386M_1=8||@RS Part Number=536-1366||@Allied_Number=||@Manufacturer_Name=TI||@Manufacturer_Part_Number=LM386M-1/NOPB||@Other Part Number=||@3D Package=||@Height=
