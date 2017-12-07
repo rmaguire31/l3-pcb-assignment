@@ -1,0 +1,72 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{amsmath}
+\usepackage[english]{babel}
+% \usepackage[style=ieee,backend=bibtex]{biblatex}
+	% \bibliography{ref.bib}
+\usepackage{booktabs}
+\usepackage[font={small}]{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[latin1]{inputenc}
+\usepackage{nomencl}
+\usepackage{microtype}
+\usepackage{multicol}
+\usepackage{pgfplots}
+    \newlength\figureheight 
+    \newlength\figurewidth 
+\usepackage{siunitx}
+	\DeclareUSUnit\mil{mil}
+\usepackage{tikz}
+\usepackage{titling}
+\usepackage{threeparttable}
+\usepackage{xspace}
+
+% Style to select only points from #1 to #2 (inclusive)
+\pgfplotsset{select coords between index/.style 2 args={
+    x filter/.code={
+        \ifnum\coordindex<#1\def\pgfmathresult{}\fi
+        \ifnum\coordindex>#2\def\pgfmathresult{}\fi
+    }
+}}
+
+\begin{document}
+\begin{tikzpicture}[
+    ]
+    \begin{axis}[
+                xlabel=$t$, ylabel=$V_4$, 
+                    axis y line*=left,
+            ]
+            \addplot[color=green,
+                select coords between index={1}{400},
+                filter discard warning=false, unbounded coords=discard
+                ] table [x index=0, y index=1]{data/audio_amplifier_trans.txt};
+    \end{axis}
+\end{tikzpicture}
+
+\begin{table}[h]
+	\caption{Track width calculations due to maximum current with \SI{25}{\volt} supply.}
+	\begin{tabular}{lSSS}
+	\toprule
+	Branch &
+	{\SI{$f_{I_{\text{max}}}$}{\hertz}} &
+	{\SI{$I_{max}$}{\milli\amp}} &
+	{\SI{width\textsubscript{min}}{\mil}} \\
+	\midrule
+	\SI{12}{\volt} & 85   & 470 & 4.2 \\
+	IN             & 33   &   0 & 0.0 \\
+	C1             & 24   &   0 & 0.0 \\
+	C2             & 85   & 500 & 4.6 \\
+	C3             & 20e3 & 110 & 0.5 \\
+	C4             & 20e3 & 170 & 1.0 \\
+	C5             & 20e3 &   0 & 0.0 \\
+	C6             & 20e3 &   0 & 0.0 \\
+	C7             & 20e3 &   0 & 0.0 \\
+	U1.1           & 20e3 &  65 & 0.3 \\
+	\bottomrule
+	\end{tabular}
+\end{table}
+
+\end{document}
