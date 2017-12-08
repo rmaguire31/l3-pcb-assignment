@@ -73,7 +73,7 @@
 \end{titlepage}
 
 \begin{abstract}
-	A TI LM386 audio amplifier circuit was designed to drive an \SI{8}{\ohm}
+	An LM386 audio amplifier circuit was designed to drive an \SI{8}{\ohm}
 	speaker, with a maximum gain of \SI{35}{\decibel} and maximum bass boost of
 	\SI{6}{\decibel} without clipping a \SI{65}{\decibel}SPL input. First the 
 	schematic was simulated in \LTSpice to ensure the design met the
@@ -315,7 +315,10 @@ the \SIrange{0}{6}{\decibel} boost at \SI{80}{\hertz}.
 		    legend style={font=\tiny,at={(1.01,0.5)},anchor=west},
 		    reverse legend,
 	    ]
-	   		\pgfplotsset{cycle list shift=2}
+	   		\pgfplotsset{cycle list shift=1}
+	        \addplot+[select coords between index={0000}{0300}]
+	        	table [x index=0, y index=1]{data/audio_amplifier_bass0.txt};
+        	\addlegendentry{$0$}
 	        \addplot+[select coords between index={0000}{0300}]
 	        	table [x index=0, y index=1]{data/audio_amplifier_bass.txt};
         	\addlegendentry{$2^{-6}$}
